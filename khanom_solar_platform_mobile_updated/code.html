@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solar Khanom | Institutional Investment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e4e2e1",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "tertiary-fixed": "#ffe088",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#735c00",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#f6fff5",
+                    "tertiary-container": "#cba72f",
+                    "on-tertiary-fixed": "#241a00",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-fixed-dim": "#74db9f",
+                    "surface-dim": "#dadada",
+                    "secondary": "#5f5e5e",
+                    "outline-variant": "#bdcabe",
+                    "surface-container-high": "#e8e8e8",
+                    "background": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed": "#002110",
+                    "inverse-on-surface": "#f1f1f1",
+                    "outline": "#6e7a70",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#90f7ba",
+                    "on-surface-variant": "#3e4941",
+                    "primary": "#006a40",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "inverse-surface": "#2f3131",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-container": "#4e3d00",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "surface-variant": "#e2e2e2",
+                    "primary-container": "#0d8552",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "on-primary-fixed-variant": "#005230",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#656464",
+                    "secondary-fixed": "#e4e2e1",
+                    "surface-tint": "#006d41",
+                    "inverse-primary": "#74db9f",
+                    "on-surface": "#1a1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background pb-20">
+<!-- Top App Bar -->
+<header class="bg-surface shadow-sm docked full-width top-0 sticky z-50 border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="energy_savings_leaf" style="font-variation-settings: 'FILL' 1;"></span>
+<h1 class="font-display-lg text-headline-md font-bold text-primary tracking-tight">Solar Khanom</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface" data-icon="language"></button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs">Login</button>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full h-[85vh] overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Khanom Solar Farm" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtPKXmqIj9GMTcC9rt1KQi53YcT3IialTd3bl9W4x140L2aMp5h0gP0Suto0N1EbjaTHr_kWLXGOjHF9y10o2Rdi9mTmMs57SXLzNWlHAqB8mv18jxuKB4WuHNQkXD_e4B0CnjwAyCxjBQ3dyL1yDk0KFdkSv_TJ3ZFEBFEYsbs8qJ7YtfIFMLNz1sJro2pvLLNTxTHpfzTiO4ci30CRh0i7iBgjYp_wWuBc3AjUJjlvpsT8myusrJ6VE0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background/90"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-end px-margin-mobile pb-12">
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-3 py-1 rounded-full mb-4 w-fit uppercase">Institutional Phase II</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-4">The Future of Thai Infrastructure.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8 opacity-90">Invest in the 120MW solar expansion at Khanom. Sustainable returns, institutional-grade governance, and national impact.</p>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md text-body-md shadow-lg active:scale-[0.98] transition-transform">Download Prospectus</button>
+<button class="w-full bg-white/10 backdrop-blur-md border border-white/30 text-white py-4 rounded-xl font-headline-md text-body-md">Inquire with Advisor</button>
+</div>
+</div>
+</section>
+<!-- Metrics Grid (Horizontal Scroll on Mobile) -->
+<section class="py-10 px-margin-mobile">
+<div class="flex overflow-x-auto gap-4 scrollbar-hide snap-x -mx-5 px-5">
+<div class="min-w-[280px] snap-center bg-surface border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)]">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-2 block">Target IRR</span>
+<div class="font-headline-lg text-headline-lg text-primary flex items-baseline gap-1">
+                        8.4<span class="text-headline-md">%</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant mt-2">Net of fees, annually</p>
+</div>
+<div class="min-w-[280px] snap-center bg-surface border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)]">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-2 block">Funding Progress</span>
+<div class="font-headline-lg text-headline-lg text-primary">64%</div>
+<div class="w-full bg-secondary-container h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full w-[64%]"></div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant mt-2">฿1.2B of ฿2.0B Raised</p>
+</div>
+<div class="min-w-[280px] snap-center bg-surface border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)]">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-2 block">Project Lifecycle</span>
+<div class="font-headline-lg text-headline-lg text-tertiary">25 Yrs</div>
+<p class="font-body-md text-sm text-on-surface-variant mt-2">PPA with EGAT secured</p>
+</div>
+</div>
+</section>
+<!-- Interactive Calculator Section -->
+<section class="py-12 px-margin-mobile bg-surface-container-low">
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="calculate"></span>
+<h3 class="font-headline-md text-headline-md">Return Estimator</h3>
+</div>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-4">
+<label class="font-label-caps text-secondary">Initial Investment</label>
+<span class="font-headline-md text-primary" id="amount-val">฿5,000,000</span>
+</div>
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-primary" id="investment-slider" max="50000000" min="1000000" step="500000" type="range" value="5000000"/>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant pt-6">
+<div>
+<span class="font-label-caps text-secondary text-[10px] block mb-1">YEARLY DIVIDEND</span>
+<div class="font-headline-md text-primary text-lg">฿420,000</div>
+</div>
+<div>
+<span class="font-label-caps text-secondary text-[10px] block mb-1">TOTAL RETURN (10Y)</span>
+<div class="font-headline-md text-tertiary text-lg">฿9.2M</div>
+</div>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container rounded-xl font-semibold flex items-center justify-center gap-2">
+                        Get Detailed PDF Report
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Why Khanom Bento -->
+<section class="py-16 px-margin-mobile">
+<h3 class="font-display-lg-mobile text-headline-lg mb-8">Asset Fundamentals</h3>
+<div class="grid grid-cols-1 gap-6">
+<!-- Card 1 -->
+<div class="p-8 bg-surface-bright rounded-xl border border-outline-variant relative overflow-hidden group">
+<span class="material-symbols-outlined text-4xl text-primary/20 absolute -top-2 -right-2 scale-150" data-icon="verified_user"></span>
+<h4 class="font-headline-md text-headline-md mb-3">Gov-Backed Security</h4>
+<p class="font-body-md text-on-surface-variant">25-year Power Purchase Agreement (PPA) with national utility providers ensures long-term cash flow stability.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 bg-surface-bright rounded-xl border border-outline-variant relative overflow-hidden group">
+<span class="material-symbols-outlined text-4xl text-primary/20 absolute -top-2 -right-2 scale-150" data-icon="sunny"></span>
+<h4 class="font-headline-md text-headline-md mb-3">Optimal Irradiance</h4>
+<p class="font-body-md text-on-surface-variant">Located in the Gulf of Thailand's solar belt, providing 1,800+ peak sun hours annually.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 bg-primary text-on-primary rounded-xl relative overflow-hidden group shadow-xl">
+<h4 class="font-headline-md text-headline-md mb-3 text-primary-fixed">Impact Report</h4>
+<p class="font-body-md opacity-90 mb-4">Carbon offset equivalent to 45,000 trees planted annually. Full ESG compliance for institutional mandates.</p>
+<div class="flex items-center gap-2 text-primary-fixed font-semibold">
+                        View Audit
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-16 px-margin-mobile bg-surface-container-lowest">
+<h3 class="font-headline-lg text-headline-lg mb-10">Investment Roadmap</h3>
+<div class="space-y-0 relative border-l-2 border-primary/20 ml-3">
+<div class="pl-8 pb-10 relative">
+<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white"></div>
+<span class="font-label-caps text-primary mb-2 block">PHASE 1: COMPLETE</span>
+<h5 class="font-headline-md text-lg">Site Preparation &amp; Permitting</h5>
+<p class="font-body-md text-sm text-secondary">All land titles secured and environmental impact assessments finalized (Q4 2023).</p>
+</div>
+<div class="pl-8 pb-10 relative">
+<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-white animate-pulse"></div>
+<span class="font-label-caps text-primary mb-2 block">PHASE 2: ACTIVE</span>
+<h5 class="font-headline-md text-lg">Capital Raising &amp; Procurement</h5>
+<p class="font-body-md text-sm text-secondary">Current funding round for Tier-1 solar module acquisition and construction rollout.</p>
+</div>
+<div class="pl-8 relative">
+<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-secondary-container border-4 border-white"></div>
+<span class="font-label-caps text-secondary mb-2 block">PHASE 3: Q3 2025</span>
+<h5 class="font-headline-md text-lg">Grid Integration</h5>
+<p class="font-body-md text-sm text-secondary">First energy delivery to the national grid and commencement of quarterly dividends.</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 px-margin-mobile text-center bg-white">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-6">Secure Your Allocation.</h2>
+<p class="font-body-md mb-10 text-on-surface-variant">Join a consortium of sophisticated investors driving Thailand's energy transition.</p>
+<div class="space-y-4">
+<button class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-lg">Register Interest</button>
+<div class="flex items-center justify-center gap-4 text-secondary py-2">
+<span class="material-symbols-outlined" data-icon="phone_in_talk"></span>
+<span class="font-body-md">+66 (0) 2 123 4567</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-dim py-16 px-margin-mobile border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto space-y-12">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="energy_savings_leaf" style="font-variation-settings: 'FILL' 1;"></span>
+<h3 class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed">Solar Khanom</h3>
+</div>
+<p class="font-body-md text-on-surface/70 text-sm leading-relaxed">
+                    © 2024 Thai Online Solutions Co., Ltd. Registered in Thailand No. 0105563001234. Authorized and regulated for institutional investment.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<a class="block text-secondary font-label-caps text-xs hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="block text-secondary font-label-caps text-xs hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="block text-secondary font-label-caps text-xs hover:text-primary transition-colors" href="#">Regulatory Disclosure</a>
+</div>
+<div class="space-y-4">
+<a class="block text-secondary font-label-caps text-xs hover:text-primary transition-colors" href="#">Investor Relations</a>
+<a class="block text-secondary font-label-caps text-xs hover:text-primary transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bottom Nav Bar (Mobile-specific) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-lg h-16 flex items-center justify-around px-2 z-[100] md:hidden shadow-[0px_-4px_20px_rgba(51,51,51,0.04)]">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="portfolio" data-weight="fill" style="font-variation-settings: 'FILL' 1;"></span>
+<span class="font-label-caps text-[10px]">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined" data-icon="auto_graph"></span>
+<span class="font-label-caps text-[10px]">Impact</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined" data-icon="account_balance"></span>
+<span class="font-label-caps text-[10px]">Governance</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined" data-icon="description"></span>
+<span class="font-label-caps text-[10px]">Resources</span>
+</div>
+</nav>
+<script>
+        // Simple micro-interaction for the slider
+        const slider = document.getElementById('investment-slider');
+        const amountDisplay = document.getElementById('amount-val');
+        
+        slider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            amountDisplay.innerText = '฿' + (val / 1000000).toFixed(1) + 'M';
+            
+            // Visual active state for interaction feedback
+            amountDisplay.classList.add('scale-105');
+            setTimeout(() => amountDisplay.classList.remove('scale-105'), 150);
+        });
+    </script>
+</body></html>

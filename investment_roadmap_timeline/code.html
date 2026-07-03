@@ -1,0 +1,302 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Investment Roadmap | Solar Khanom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-primary-container": "#f6fff5",
+                    "on-surface-variant": "#3e4941",
+                    "surface-container": "#eeeeee",
+                    "primary-container": "#0d8552",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-surface": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "outline-variant": "#bdcabe",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#74db9f",
+                    "on-primary-fixed": "#002110",
+                    "surface-bright": "#f9f9f9",
+                    "outline": "#6e7a70",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#cba72f",
+                    "secondary": "#5f5e5e",
+                    "background": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-dim": "#dadada",
+                    "secondary-container": "#e4e2e1",
+                    "primary-fixed": "#90f7ba",
+                    "on-secondary-container": "#656464",
+                    "inverse-surface": "#2f3131",
+                    "inverse-primary": "#74db9f",
+                    "on-tertiary-container": "#4e3d00",
+                    "on-primary-fixed-variant": "#005230",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-tint": "#006d41",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffe088",
+                    "primary": "#006a40",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary": "#735c00",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "32px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: repeating-linear-gradient(to bottom, #e2e2e2, #e2e2e2 4px, transparent 4px, transparent 8px);
+        }
+        .timeline-dot {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-background shadow-[0px_4px_20px_rgba(51,51,51,0.04)] fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">Solar Khanom</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-all duration-300" href="#">Portfolio</a>
+<a class="text-secondary dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-all duration-300" href="#">Impact</a>
+<a class="text-secondary dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-all duration-300" href="#">Governance</a>
+<a class="text-secondary dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-all duration-300" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-secondary">language</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:opacity-90 transition-all">Investor Login</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 min-h-screen">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-20">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">Strategic Evolution</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">Project Lifecycle</h1>
+<p class="font-body-lg text-body-lg text-secondary">Transparency is the bedrock of institutional trust. Follow our systematic progression from site acquisition to full-scale renewable power generation.</p>
+</div>
+</section>
+<!-- Vertical Timeline Component -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative">
+<!-- Central Line -->
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/30 transform md:-translate-x-1/2"></div>
+<!-- Milestone 1: Land Acquisition -->
+<div class="relative mb-24 md:flex items-center justify-between w-full transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="font-label-caps text-label-caps text-secondary">Completed Q1 2023</span>
+</div>
+<div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-surface shadow-md transform -translate-x-1/2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary font-bold">check</span>
+</div>
+<div class="ml-12 md:ml-0 md:w-[45%] pl-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)] border-l-4 border-primary hover:shadow-[0px_12px_32px_rgba(51,51,51,0.08)] transition-all">
+<span class="md:hidden font-label-caps text-label-caps text-secondary mb-2 block">Completed Q1 2023</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Land Acquisition</h3>
+<p class="font-body-md text-body-md text-secondary">Successful securement of 450 hectares of prime industrial-grade land in Khanom, optimized for maximum solar irradiance and infrastructure proximity.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 2: Environmental Impact Assessment -->
+<div class="relative mb-24 md:flex items-center justify-between w-full flex-row-reverse transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="font-label-caps text-label-caps text-secondary">Completed Q4 2023</span>
+</div>
+<div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-surface shadow-md transform -translate-x-1/2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary font-bold">check</span>
+</div>
+<div class="ml-12 md:ml-0 md:w-[45%] pr-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)] border-r-0 md:border-r-4 border-l-4 md:border-l-0 border-primary hover:shadow-[0px_12px_32px_rgba(51,51,51,0.08)] transition-all md:text-right">
+<span class="md:hidden font-label-caps text-label-caps text-secondary mb-2 block">Completed Q4 2023</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Environmental Impact Assessment</h3>
+<p class="font-body-md text-body-md text-secondary">Rigorous ecological and social impact studies finalized with full regulatory approval, ensuring project sustainability and community alignment.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 3: Funding Round A -->
+<div class="relative mb-24 md:flex items-center justify-between w-full transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary">In Progress</span>
+</div>
+</div>
+<div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-primary border-4 border-primary-fixed shadow-[0_0_15px_rgba(0,106,64,0.3)] transform -translate-x-1/2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-primary" data-weight="fill">payments</span>
+</div>
+<div class="ml-12 md:ml-0 md:w-[45%] pl-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_12px_32px_rgba(51,51,51,0.08)] border-l-4 border-primary ring-2 ring-primary/5 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-primary">Active Selection</span>
+<span class="font-label-caps text-label-caps text-secondary">Target: $45M</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Funding Round A</h3>
+<p class="font-body-md text-body-md text-secondary">Opening capital allocation for institutional partners. We are currently vetting strategic investors for Tier 1 participation in Phase 1 construction.</p>
+<button class="mt-6 text-primary font-label-caps text-label-caps flex items-center gap-2 hover:gap-4 transition-all">
+                                REQUEST DATA ROOM ACCESS <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Milestone 4: Grid Connection -->
+<div class="relative mb-24 md:flex items-center justify-between w-full flex-row-reverse transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="font-label-caps text-label-caps text-tertiary">Projected Q3 2024</span>
+</div>
+<div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-surface-container-highest border-4 border-surface shadow-sm transform -translate-x-1/2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">bolt</span>
+</div>
+<div class="ml-12 md:ml-0 md:w-[45%] pr-12 opacity-80 hover:opacity-100 transition-opacity">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)] border-r-0 md:border-r-4 border-l-4 md:border-l-0 border-tertiary/40 hover:border-tertiary transition-all md:text-right">
+<span class="md:hidden font-label-caps text-label-caps text-tertiary mb-2 block">Projected Q3 2024</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Grid Connection</h3>
+<p class="font-body-md text-body-md text-secondary">Synchronization with the national power utility grid. Implementation of high-capacity transformers and redundant safety systems.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 5: Commercial Operation -->
+<div class="relative md:flex items-center justify-between w-full">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="font-label-caps text-label-caps text-tertiary">Projected Q1 2025</span>
+</div>
+<div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-surface-container-highest border-4 border-surface shadow-sm transform -translate-x-1/2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">wb_sunny</span>
+</div>
+<div class="ml-12 md:ml-0 md:w-[45%] pl-12 opacity-80 hover:opacity-100 transition-opacity">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(51,51,51,0.04)] border-l-4 border-tertiary/40 hover:border-tertiary transition-all">
+<span class="md:hidden font-label-caps text-label-caps text-tertiary mb-2 block">Projected Q1 2025</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Commercial Operation</h3>
+<p class="font-body-md text-body-md text-secondary">Commencement of full-scale energy production and revenue generation. Milestone triggers first-tier distribution to institutional equity holders.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-32">
+<div class="bg-primary-container p-12 md:p-16 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed-dim/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container mb-4">Invest in Sustainable Growth</h2>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90">Secure your position in the Q3 funding cycle and become a partner in Thailand's renewable energy transition.</p>
+</div>
+<div class="relative z-10 flex gap-4">
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:scale-105 transition-transform">Download Prospectus</button>
+<button class="border border-on-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-on-primary-container/10 transition-colors">Contact Relations</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-dim">
+<div class="w-full py-16 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<span class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed mb-6 block">Solar Khanom</span>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant opacity-70 max-w-md">© 2024 Thai Online Solutions Co., Ltd. Registered in Thailand No. 0105563001234. Authorized and regulated for institutional investment.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-surface">Compliance</span>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Regulatory Disclosure</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-surface">Quick Links</span>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Investor Relations</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal interaction for timeline elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.relative.mb-24').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

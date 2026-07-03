@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#e8e8e8",
+            "background": "#f9f9f9",
+            "on-background": "#1a1c1c",
+            "outline-variant": "#bdcabe",
+            "surface-dim": "#dadada",
+            "secondary": "#5f5e5e",
+            "surface-container-highest": "#e2e2e2",
+            "primary-fixed-dim": "#74db9f",
+            "tertiary-container": "#cba72f",
+            "on-tertiary-fixed": "#241a00",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#f6fff5",
+            "tertiary": "#735c00",
+            "surface-bright": "#f9f9f9",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffe088",
+            "on-secondary-fixed-variant": "#474747",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#1b1c1c",
+            "secondary-container": "#e4e2e1",
+            "on-surface": "#1a1c1c",
+            "surface-tint": "#006d41",
+            "inverse-primary": "#74db9f",
+            "secondary-fixed": "#e4e2e1",
+            "on-secondary-container": "#656464",
+            "primary-container": "#0d8552",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#c8c6c6",
+            "on-primary-fixed-variant": "#005230",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#e9c349",
+            "surface-variant": "#e2e2e2",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9f9",
+            "on-tertiary-container": "#4e3d00",
+            "surface-container": "#eeeeee",
+            "on-tertiary-fixed-variant": "#574500",
+            "inverse-surface": "#2f3131",
+            "primary": "#006a40",
+            "primary-fixed": "#90f7ba",
+            "on-surface-variant": "#3e4941",
+            "outline": "#6e7a70",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#002110",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-low": "#f3f3f3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "label-caps": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "body-md": ["Manrope"],
+            "body-lg": ["Manrope"],
+            "display-lg-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "display-lg": ["Manrope"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #f9f9f9;
+      font-family: 'Manrope', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #006a40; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-background text-on-background">
+<div class="relative w-full h-screen overflow-hidden flex flex-col">
+<!-- Three.js Background -->
+
+<!-- Header / Nav -->
+<nav class="w-full px-margin-desktop py-6 flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">account_balance</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">Emerald <span class="text-primary">&amp;</span> Gold</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-label-caps text-secondary">
+<a class="hover:text-primary transition-colors" href="#">OPPORTUNITIES</a>
+<a class="hover:text-primary transition-colors" href="#">STRATEGY</a>
+<a class="hover:text-primary transition-colors" href="#">PORTFOLIO</a>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-container transition-all">INVESTOR LOGIN</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col lg:flex-row items-center justify-center gap-12 px-margin-mobile lg:px-margin-desktop py-8 relative">
+<!-- Hero.astro Section (Refactored to handle props dynamically) -->
+<section class="w-full lg:w-1/2 flex flex-col gap-6" data-committed-amount="18750000" data-equity-available="6250000" data-equity-target="25000000" data-progress-percent="75" data-remaining-amount="6250000" id="hero-section">
+<div class="flex flex-col gap-2">
+<span class="text-tertiary font-bold tracking-[0.2em] uppercase text-sm">Now Open for Subscription</span>
+<h1 class="text-display-lg-mobile lg:text-display-lg text-on-background leading-tight">
+            Institutional <span class="text-primary italic">Real Estate</span> Growth Fund II
+          </h1>
+<p class="text-body-lg text-secondary max-w-xl">
+            Secure your allocation in our latest high-yield commercial portfolio, focused on supply-constrained logistics and medical office assets.
+          </p>
+</div>
+<!-- Dynamic Funding Stats -->
+<div class="bg-white/80 backdrop-blur-md p-8 rounded-xl border border-outline-variant shadow-lg flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-caps text-secondary mb-1">EQUITY TARGET</p>
+<h3 class="text-headline-lg text-on-background" id="display-equity-target">$25,000,000</h3>
+</div>
+<div class="text-right">
+<p class="text-label-caps text-secondary mb-1">COMMITTED</p>
+<h3 class="text-headline-lg text-primary" id="display-committed-amount">$18,750,000</h3>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary" id="progress-bar-fill" style="width: 75%;"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-secondary"><span class="font-bold text-on-background" id="display-progress-percent">75%</span> Funded</span>
+<span class="text-secondary">Remaining: <span class="font-bold text-tertiary" id="display-remaining-amount">$6,250,000</span></span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-xl transition-all">
+            VIEW OFFERING MEMORANDUM <span class="material-symbols-outlined">download</span>
+</button>
+<button class="border-2 border-outline text-on-background px-8 py-4 rounded-xl font-bold hover:bg-surface-container-low transition-all">
+            SPEAK WITH AN ADVISOR
+          </button>
+</div>
+</section>
+<!-- Calculator.astro Section (Refactored to handle props dynamically) -->
+<section class="w-full lg:w-5/12 bg-on-background text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden" data-irr="14.2" data-max="5000000" data-min="50000" data-share-price="1000" id="calculator-section">
+<!-- Subtle gold accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary opacity-10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="relative z-10 flex flex-col gap-8">
+<header>
+<h2 class="text-headline-md mb-2">Yield Projection</h2>
+<p class="text-secondary text-sm">Calculate your estimated 5-year returns based on current IRR projections.</p>
+</header>
+<div class="flex flex-col gap-6">
+<!-- Slider Control -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="text-label-caps text-secondary">INVESTMENT AMOUNT</label>
+<span class="text-xl font-bold text-tertiary-fixed-dim" id="investment-value-display">$250,000</span>
+</div>
+<input class="w-full h-2 bg-secondary/30 rounded-lg appearance-none cursor-pointer accent-primary" id="investment-slider" max="5000000" min="50000" step="10000" type="range" value="250000"/>
+<div class="flex justify-between text-xs text-secondary">
+<span id="min-label">$50,000</span>
+<span id="max-label">$5,000,000</span>
+</div>
+</div>
+<!-- Results Grid -->
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="bg-white/5 p-4 rounded-lg border border-white/10">
+<p class="text-label-caps text-secondary text-[10px] mb-1 uppercase">Est. Annual Yield</p>
+<p class="text-xl font-semibold text-primary-fixed-dim" id="annual-yield">$35,500</p>
+</div>
+<div class="bg-white/5 p-4 rounded-lg border border-white/10">
+<p class="text-label-caps text-secondary text-[10px] mb-1 uppercase">Total Shares</p>
+<p class="text-xl font-semibold" id="total-shares">250</p>
+</div>
+<div class="col-span-2 bg-primary/10 p-4 rounded-lg border border-primary/20 flex justify-between items-center">
+<div>
+<p class="text-label-caps text-secondary text-[10px] mb-1 uppercase">Projected 5-Year Exit Value</p>
+<p class="text-2xl font-bold text-white" id="exit-value">$485,500</p>
+</div>
+<div class="text-right">
+<p class="text-label-caps text-tertiary text-[10px] mb-1 uppercase">Net Gain</p>
+<p class="text-lg font-bold text-tertiary-fixed-dim" id="net-gain">+$235,500</p>
+</div>
+</div>
+</div>
+<p class="text-[10px] text-secondary/60 leading-relaxed italic">
+              *Projections based on <span id="irr-display">14.2%</span> estimated IRR and <span id="share-price-display">$1,000</span> share price. Past performance is not indicative of future results.
+            </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Stats -->
+<footer class="w-full px-margin-desktop py-8 border-t border-outline-variant/30 flex justify-between items-center bg-white/50 backdrop-blur-sm">
+<div class="flex gap-12">
+<div>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest mb-1">Assets Under Mgmt</p>
+<p class="text-lg font-bold text-on-background">$1.2B+</p>
+</div>
+<div>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest mb-1">Average IRR</p>
+<p class="text-lg font-bold text-on-background">16.8%</p>
+</div>
+<div>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest mb-1">Investor Distributions</p>
+<p class="text-lg font-bold text-on-background">$420M</p>
+</div>
+</div>
+<div class="text-xs text-secondary flex items-center gap-4">
+<span>© 2024 Emerald &amp; Gold Partners</span>
+<div class="flex gap-3">
+<a class="hover:text-primary" href="#">Legal</a>
+<a class="hover:text-primary" href="#">Disclosures</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+    // Logic for Hero Section Props
+    function initHero() {
+      const heroEl = document.getElementById('hero-section');
+      if (!heroEl) return;
+
+      const formatCurrency = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(val);
+
+      const target = parseFloat(heroEl.dataset.equityTarget);
+      const committed = parseFloat(heroEl.dataset.committedAmount);
+      const available = parseFloat(heroEl.dataset.equityAvailable);
+      const progress = parseFloat(heroEl.dataset.progressPercent);
+      const remaining = parseFloat(heroEl.dataset.remainingAmount);
+
+      document.getElementById('display-equity-target').textContent = formatCurrency(target);
+      document.getElementById('display-committed-amount').textContent = formatCurrency(committed);
+      document.getElementById('display-progress-percent').textContent = progress + '%';
+      document.getElementById('display-remaining-amount').textContent = formatCurrency(remaining);
+      document.getElementById('progress-bar-fill').style.width = progress + '%';
+    }
+
+    // Logic for Calculator Section Props
+    function initCalculator() {
+      const calcEl = document.getElementById('calculator-section');
+      const slider = document.getElementById('investment-slider');
+      if (!calcEl || !slider) return;
+
+      // Props from data attributes
+      const MIN = parseFloat(calcEl.dataset.min);
+      const MAX = parseFloat(calcEl.dataset.max);
+      const IRR = parseFloat(calcEl.dataset.irr) / 100;
+      const SHARE_PRICE = parseFloat(calcEl.dataset.sharePrice);
+
+      // Initialize UI elements
+      slider.min = MIN;
+      slider.max = MAX;
+      document.getElementById('min-label').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(MIN);
+      document.getElementById('max-label').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(MAX);
+      document.getElementById('irr-display').textContent = (IRR * 100).toFixed(1) + '%';
+      document.getElementById('share-price-display').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(SHARE_PRICE);
+
+      const updateValues = () => {
+        const val = parseFloat(slider.value);
+        const formatCurrency = (v) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(v);
+        
+        document.getElementById('investment-value-display').textContent = formatCurrency(val);
+        
+        // Simple linear math for projection
+        const annualYield = val * (IRR / 2); // Roughly half the IRR for annual distribution
+        const shares = Math.floor(val / SHARE_PRICE);
+        const exitValue = val * Math.pow(1 + IRR, 5); // Compounded over 5 years
+        const netGain = exitValue - val;
+
+        document.getElementById('annual-yield').textContent = formatCurrency(annualYield);
+        document.getElementById('total-shares').textContent = shares.toLocaleString();
+        document.getElementById('exit-value').textContent = formatCurrency(exitValue);
+        document.getElementById('net-gain').textContent = '+' + formatCurrency(netGain);
+      };
+
+      slider.addEventListener('input', updateValues);
+      updateValues(); // Initial run
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initHero();
+      initCalculator();
+    });
+  </script>
+</body></html>
