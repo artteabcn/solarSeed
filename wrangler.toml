@@ -1,0 +1,12 @@
+name = "solar-khanom"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "dist"
+
+# Static site for now — no bindings needed.
+# When the Shareholder Portal (login + dashboard) is built, add a D1 binding
+# here, e.g.:
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "solar-khanom-portal"
+# database_id = "<uuid-from-cloudflare-dashboard>"

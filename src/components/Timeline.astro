@@ -1,0 +1,128 @@
+---
+/**
+ * Timeline.astro
+ * Institutional Investment Roadmap for the Solar Khanom Platform.
+ * Designed for modularity and high-fidelity rendering in Astro.
+ */
+
+const milestones = [
+  {
+    stage: "Phase 1",
+    title: "Land Acquisition & Permitting",
+    date: "Completed - Q4 2022",
+    description: "Secured ~0.7 Rai (1,120 sqm) of site in Khanom district. Permits finalized for a 120-panel, 87.6 kWp ground-mounted array.",
+    status: "completed",
+    icon: "check-circle"
+  },
+  {
+    stage: "Phase 2",
+    title: "EIA & Technical Feasibility",
+    date: "Completed - Q2 2023",
+    description: "Environmental Impact Assessment approved by regulatory bodies. Full technical yield studies verified by tier-1 engineering firm.",
+    status: "completed",
+    icon: "check-circle"
+  },
+  {
+    stage: "Phase 3",
+    title: "Funding Round A",
+    date: "Active - Q1 2024",
+    description: "Equity raising for the 87.6 kWp / THB 1,500,000 installation. Currently 70% committed.",
+    status: "current",
+    icon: "clock"
+  },
+  {
+    stage: "Phase 4",
+    title: "EPC Mobilization & Grid Connection",
+    date: "Expected - Q4 2024",
+    description: "Procurement of 120 high-efficiency 730W modules and commencement of on-site construction and PEA grid integration.",
+    status: "upcoming",
+    icon: "zap"
+  },
+  {
+    stage: "Phase 5",
+    title: "Commercial Operation Date (COD)",
+    date: "Projected - Q2 2025",
+    description: "Final commissioning and commencement of the power purchase arrangement with the Provincial Electricity Authority (PEA).",
+    status: "upcoming",
+    icon: "sun"
+  }
+];
+---
+
+<section class="py-24 bg-surface" id="timeline">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-20">
+      <h2 class="font-headline-md text-3xl md:text-4xl font-bold text-charcoal mb-4">
+        Project Execution Roadmap
+      </h2>
+      <p class="text-charcoal/60 max-w-2xl mx-auto">
+        A transparent overview of the Khanom Solar Infrastructure Fund's development stages and future milestones.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Vertical Line -->
+      <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-charcoal/10 -translate-x-1/2 hidden md:block"></div>
+
+      <div class="space-y-12 md:space-y-24">
+        {milestones.map((item, index) => (
+          <div class={`relative flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+            
+            <!-- Timeline Dot -->
+            <div class={`absolute left-4 md:left-1/2 w-8 h-8 rounded-full border-4 border-white shadow-sm -translate-x-1/2 z-10 flex items-center justify-center
+              ${item.status === 'completed' ? 'bg-primary' : item.status === 'current' ? 'bg-primary animate-pulse' : 'bg-surface-dim'}`}>
+              <div class={`w-2 h-2 rounded-full bg-white`}></div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="w-full md:w-[45%] ml-12 md:ml-0">
+              <div class={`p-8 rounded-card border transition-all duration-300 bg-white
+                ${item.status === 'current' ? 'border-primary shadow-lg scale-[1.02]' : 'border-black/5 shadow-soft hover:shadow-md'}`}>
+                
+                <div class="flex justify-between items-start mb-4">
+                  <span class={`text-xs font-bold uppercase tracking-widest px-2 py-1 rounded
+                    ${item.status === 'completed' ? 'bg-primary/10 text-primary' : item.status === 'current' ? 'bg-primary text-white' : 'bg-charcoal/5 text-charcoal/40'}`}>
+                    {item.stage}
+                  </span>
+                  <span class="text-sm font-medium text-charcoal/60">{item.date}</span>
+                </div>
+
+                <h3 class="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
+                <p class="text-charcoal/70 leading-relaxed text-sm md:text-base">{item.description}</p>
+                
+                {item.status === 'current' && (
+                  <div class="mt-6 pt-6 border-t border-primary/10 flex items-center gap-2 text-primary font-bold text-sm">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Priority Focus
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <!-- Spacer for MD+ -->
+            <div class="hidden md:block w-[45%]"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-24 text-center">
+      <div class="inline-flex flex-col items-center">
+        <p class="text-sm font-bold text-charcoal/40 uppercase tracking-widest mb-6">Want the full technical brief?</p>
+        <a href="/technical-roadmap.pdf" class="px-8 py-4 bg-charcoal text-white font-bold rounded-lg hover:bg-charcoal/90 transition-all flex items-center gap-3">
+          Download Full Roadmap (PDF)
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rounded-card { border-radius: 12px; }
+  .shadow-soft { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
+  .text-primary { color: #1E8E5A; }
+  .bg-primary { background-color: #1E8E5A; }
+  .text-charcoal { color: #333333; }
+  .bg-surface { background-color: #f9f9f9; }
+</style>

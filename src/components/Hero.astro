@@ -1,0 +1,98 @@
+---
+interface Props {
+  roundName: string;
+  equityTarget: string;
+  committedAmount: string;
+  equityAvailable: string;
+  backgroundImage: string;
+}
+
+const { 
+  roundName = "Funding Round A", 
+  equityTarget = "THB 1,500,000", 
+  committedAmount = "THB 1,050,000",
+  equityAvailable = "30%",
+  backgroundImage = "{{DATA:IMAGE:IMAGE_3}}"
+} = Astro.props;
+
+const progressPercent = 70; // (1050/1500) * 100
+---
+
+<section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src={backgroundImage} 
+      alt="Solar Farm in Khanom" 
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/40 to-transparent"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10 max-w-7xl">
+    <div class="max-w-2xl text-white">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-fixed mb-6">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-xs font-bold uppercase tracking-wider">Active Funding Round</span>
+      </div>
+      
+      <h1 class="font-headline-lg text-5xl md:text-7xl font-bold leading-tight mb-4">
+        {roundName}
+      </h1>
+      
+      <p class="font-body-lg text-xl text-white/90 mb-8 leading-relaxed">
+        Invest in a Utility-Scale Solar Farm in Khanom, Thailand. Join an exclusive institutional syndicate powering Nakhon Si Thammarat's future.
+      </p>
+
+      <!-- Funding Progress Card -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-card shadow-soft mb-10">
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <p class="text-sm uppercase tracking-widest text-white/60 mb-1">Equity Target</p>
+            <p class="text-2xl font-bold">{equityTarget}</p>
+          </div>
+          <div class="text-right">
+            <p class="text-sm uppercase tracking-widest text-white/60 mb-1">Status</p>
+            <p class="text-2xl font-bold text-secondary">{equityAvailable} Available</p>
+          </div>
+        </div>
+        
+        <div class="w-full h-3 bg-white/20 rounded-full overflow-hidden mb-2">
+          <div 
+            class="h-full bg-primary transition-all duration-1000 ease-out" 
+            style={`width: ${progressPercent}%`}
+          ></div>
+        </div>
+        
+        <div class="flex justify-between text-xs text-white/60 font-medium">
+          <span>Committed: {committedAmount}</span>
+          <span>Remaining: THB 450,000</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a 
+          href="#invest" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all transform hover:scale-105"
+        >
+          Invest Now
+        </a>
+        <a 
+          href="/memorandum.pdf" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-lg transition-all"
+        >
+          Download Memorandum
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline-lg { font-family: 'Manrope', sans-serif; }
+  .font-body-lg { font-family: 'Manrope', sans-serif; }
+  .text-charcoal { color: #333333; }
+  .bg-primary { border-color: #1E8E5A; background-color: #1E8E5A; }
+  .text-primary-fixed { color: #36eb94; }
+  .text-secondary { color: #D4AF37; }
+</style>

@@ -1,0 +1,34 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-charcoal text-white/70 py-16">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <p class="font-extrabold text-lg text-white mb-3">Solar Khanom</p>
+        <p class="text-sm leading-relaxed">
+          Utility-scale solar infrastructure investment in Nakhon Si Thammarat, Thailand.
+        </p>
+      </div>
+      <div>
+        <p class="font-bold text-white text-sm uppercase tracking-widest mb-3">Legal</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/memorandum.pdf" class="hover:text-white transition-colors">Investment Memorandum</a></li>
+          <li><a href="/terms" class="hover:text-white transition-colors">Terms &amp; Risk Disclosure</a></li>
+          <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-white text-sm uppercase tracking-widest mb-3">Contact</p>
+        <p class="text-sm">investors@solarkhanom.example</p>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/10 text-xs text-white/40 leading-relaxed">
+      <p>
+        &copy; {currentYear} Thai Online Solutions Co., Ltd. (DBD Registration No. 08455670279).
+        All rights reserved. This page is for informational purposes only and does not
+        constitute an offer to sell or a solicitation of an offer to buy securities.
+      </p>
+    </div>
+  </div>
+</footer>
