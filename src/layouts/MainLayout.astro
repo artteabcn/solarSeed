@@ -2,15 +2,17 @@
 interface Props {
   title?: string;
   description?: string;
+  lang?: string;
 }
 const {
   title = 'Solar Khanom Investment Platform',
   description = 'Institutional solar infrastructure investment fund in Khanom, Thailand.',
+  lang = 'en',
 } = Astro.props;
 import '../styles/global.css';
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,11 +21,17 @@ import '../styles/global.css';
     <link rel="manifest" href="/manifest.json" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="alternate" hreflang="en" href="/" />
+    <link rel="alternate" hreflang="th" href="/th/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+Thai:wght@400;500;700;800&display=swap" rel="stylesheet" />
   </head>
-  <body class="font-sans text-charcoal bg-white antialiased">
+  <body class={`bg-white antialiased text-charcoal ${lang === 'th' ? 'font-thai' : 'font-sans'}`}>
     <slot />
   </body>
 </html>
+
+<style>
+  .font-thai { font-family: 'Noto Sans Thai', 'Manrope', sans-serif; }
+</style>

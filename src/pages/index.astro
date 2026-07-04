@@ -5,19 +5,15 @@ import Hero from '../components/Hero.astro';
 import KPICards from '../components/KPICards.astro';
 import Timeline from '../components/Timeline.astro';
 import Footer from '../components/Footer.astro';
+
+const lang = 'en';
 ---
-<MainLayout>
-  <Header />
+<MainLayout lang={lang}>
+  <Header lang={lang} />
   <main>
-    <Hero
-      roundName="Funding Round A"
-      equityTarget="THB 1,500,000"
-      committedAmount="THB 1,050,000"
-      equityAvailable="30%"
-      backgroundImage="/hero-solar-farm.jpg"
-    />
-    <KPICards />
-    <Timeline />
+    <Hero lang={lang} backgroundImage="/hero-solar-farm.jpg" />
+    <KPICards lang={lang} />
+    <Timeline lang={lang} />
   </main>
-  <Footer />
+  <Footer lang={lang} />
 </MainLayout>

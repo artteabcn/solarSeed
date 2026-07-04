@@ -1,0 +1,23 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import KPICards from '../../components/KPICards.astro';
+import Timeline from '../../components/Timeline.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'th';
+---
+<MainLayout
+  lang={lang}
+  title="แพลตฟอร์มการลงทุนโซลาร์ขนอม"
+  description="กองทุนโครงสร้างพื้นฐานพลังงานแสงอาทิตย์ในอำเภอขนอม ประเทศไทย"
+>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} backgroundImage="/hero-solar-farm.jpg" />
+    <KPICards lang={lang} />
+    <Timeline lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</MainLayout>
