@@ -1,0 +1,35 @@
+---
+import { translations } from '../i18n/translations.js';
+
+interface Props {
+  lang?: string;
+}
+const { lang = 'en' } = Astro.props;
+const t = translations[lang] || translations.en;
+const m = t.memorandum;
+---
+
+<section id="memorandum" class="py-24 bg-surface">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-12">
+      <h2 class="font-headline-md text-3xl md:text-4xl font-bold text-charcoal mb-4">
+        {m.heading}
+      </h2>
+      <p class="text-charcoal/60 max-w-2xl mx-auto">
+        {m.subheading}
+      </p>
+    </div>
+
+    <div class="relative w-full rounded-card overflow-hidden shadow-soft bg-black" style="aspect-ratio: 1280 / 749;">
+      <iframe
+        src={m.embedUrl}
+        class="absolute inset-0 w-full h-full"
+        frameborder="0"
+        allowfullscreen
+        mozallowfullscreen
+        webkitallowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
