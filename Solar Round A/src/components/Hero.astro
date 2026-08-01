@@ -1,0 +1,94 @@
+---
+import { translations } from '../i18n/translations.js';
+
+interface Props {
+  lang?: string;
+  backgroundImage?: string;
+}
+const { lang = 'en', backgroundImage = '/hero-solar-farm.jpg' } = Astro.props;
+const t = translations[lang] || translations.en;
+const h = t.hero;
+const progressPercent = 3.2; // (45,000/1,420,000) * 100
+const whatsappHref = `https://wa.me/66886875964?text=${encodeURIComponent(h.whatsappMessage)}`;
+---
+
+<section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src={backgroundImage} 
+      alt="Solar Farm in Khanom" 
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/40 to-transparent"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10 max-w-7xl">
+    <div class="max-w-2xl text-white">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-fixed mb-6">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-xs font-bold uppercase tracking-wider">{h.badge}</span>
+      </div>
+      
+      <h1 class="font-headline-lg text-5xl md:text-7xl font-bold leading-tight mb-4">
+        {h.roundName}
+      </h1>
+      
+      <p class="font-body-lg text-xl text-white/90 mb-8 leading-relaxed">
+        {h.tagline}
+      </p>
+
+      <!-- Funding Progress Card -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-card shadow-soft mb-10">
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <p class="text-sm uppercase tracking-widest text-white/60 mb-1">{h.equityTargetLabel}</p>
+            <p class="text-2xl font-bold">{h.equityTarget}</p>
+          </div>
+          <div class="text-right">
+            <p class="text-sm uppercase tracking-widest text-white/60 mb-1">{h.statusLabel}</p>
+            <p class="text-2xl font-bold text-secondary">{h.equityAvailable} {h.availableSuffix}</p>
+          </div>
+        </div>
+        
+        <div class="w-full h-3 bg-white/20 rounded-full overflow-hidden mb-2">
+          <div 
+            class="h-full bg-primary transition-all duration-1000 ease-out" 
+            style={`width: ${progressPercent}%`}
+          ></div>
+        </div>
+        
+        <div class="flex justify-between text-xs text-white/60 font-medium">
+          <span>{h.committedLabel}: {h.committedAmount}</span>
+          <span>{h.remainingLabel}: {h.remainingAmount}</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a 
+          href={whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all transform hover:scale-105"
+        >
+          {h.investCta}
+        </a>
+        <a 
+          href="#memorandum" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-lg transition-all"
+        >
+          {h.memorandumCta}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline-lg { font-family: 'Manrope', sans-serif; }
+  .font-body-lg { font-family: 'Manrope', sans-serif; }
+  .text-charcoal { color: #333333; }
+  .bg-primary { border-color: #1E8E5A; background-color: #1E8E5A; }
+  .text-primary-fixed { color: #36eb94; }
+  .text-secondary { color: #D4AF37; }
+</style>

@@ -1,0 +1,126 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { translations } from '../../../i18n/translations.js';
+
+const lang = 'th';
+const t = translations[lang];
+const p = t.portal;
+---
+<MainLayout lang={lang} title="ระบบสำหรับผู้ถือหุ้น | Solar Khanom">
+  <Header lang={lang} />
+  <main class="pt-32 pb-24 min-h-screen bg-surface">
+    <div class="container mx-auto px-6 max-w-xl">
+      <div class="text-center mb-10">
+        <h1 class="font-headline-md text-3xl md:text-4xl font-bold text-charcoal mb-4">
+          {p.heading}
+        </h1>
+        <p class="text-charcoal/60">
+          {p.subheading}
+        </p>
+      </div>
+
+      <form id="portal-form" class="bg-white p-8 rounded-card shadow-soft space-y-5">
+        <div>
+          <label for="name" class="block text-sm font-bold text-charcoal mb-1">{p.nameLabel}</label>
+          <input type="text" id="name" name="name" required placeholder={p.namePlaceholder}
+            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-bold text-charcoal mb-1">{p.emailLabel}</label>
+          <input type="email" id="email" name="email" required placeholder={p.emailPlaceholder}
+            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-bold text-charcoal mb-1">{p.phoneLabel}</label>
+          <input type="tel" id="phone" name="phone" required placeholder={p.phonePlaceholder}
+            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="country" class="block text-sm font-bold text-charcoal mb-1">{p.countryLabel}</label>
+            <input type="text" id="country" name="country" required placeholder={p.countryPlaceholder}
+              class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+          </div>
+          <div>
+            <label for="language" class="block text-sm font-bold text-charcoal mb-1">{p.languageLabel}</label>
+            <input type="text" id="language" name="language" required placeholder={p.languagePlaceholder}
+              class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+          </div>
+        </div>
+
+        <div>
+          <label for="amount" class="block text-sm font-bold text-charcoal mb-1">{p.amountLabel}</label>
+          <input type="text" id="amount" name="amount" required placeholder={p.amountPlaceholder}
+            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40" />
+        </div>
+
+        <!-- Honeypot field, hidden from real users -->
+        <input type="text" name="company_website" class="hidden" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" id="portal-submit"
+          class="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all">
+          {p.submitCta}
+        </button>
+
+        <p id="portal-status" class="text-sm text-center hidden"></p>
+      </form>
+
+      <div class="text-center mt-8">
+        <a href="/" class="text-charcoal/50 hover:text-primary text-sm font-medium">{p.backHome}</a>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</MainLayout>
+
+<script define:vars={{ successMessage: p.successMessage, errorMessage: p.errorMessage, submitCta: p.submitCta, submittingCta: p.submittingCta }}>
+  const form = document.getElementById('portal-form');
+  const statusEl = document.getElementById('portal-status');
+  const submitBtn = document.getElementById('portal-submit');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Honeypot check
+    if (form.company_website.value) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = submittingCta;
+    statusEl.classList.add('hidden');
+
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      country: form.country.value,
+      language: form.language.value,
+      amount: form.amount.value,
+      lang: 'th',
+    };
+
+    try {
+      const res = await fetch('/api/portal-signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
+      statusEl.textContent = successMessage;
+      statusEl.className = 'text-sm text-center text-primary font-bold';
+      form.reset();
+      submitBtn.classList.add('hidden');
+    } catch (err) {
+      statusEl.textContent = errorMessage;
+      statusEl.className = 'text-sm text-center text-red-600 font-bold';
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitCta;
+    }
+  });
+</script>
